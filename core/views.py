@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import permissions
@@ -33,3 +34,8 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.is_valid()
             serializer.save()
             return Response(serializer.data)
+        
+
+
+def ping(request):
+    return HttpResponse("Pong", status=200)
