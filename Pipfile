@@ -18,6 +18,7 @@ psycopg2-binary = "*"
 django-environ = "*"
 dj-database-url = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 autopep8 = "*"
